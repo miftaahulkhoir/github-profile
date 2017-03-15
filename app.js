@@ -22,10 +22,11 @@ let request = https.request(options, (response) => {
 		// Parse the data
 		// Convert String to JSON (JavaScript object)
 		let profile = JSON.parse(body)
-		console.log(profile.avatar_url)
+		// Print the data out
+		console.log(`${profile.login} owns ${profile.public_repos} repo(s) and has ${profile.followers} follower(s).`)
 	})
 	
-
+	
 })
 
 request.end()
